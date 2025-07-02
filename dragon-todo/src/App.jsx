@@ -8,7 +8,7 @@ function App() {
     'todo': [
       {
         id: 'task-1',
-        title: 'Sample Task',
+        title: 'default task(u can remove it)',
         description: 'This is a sample task to show the interface',
         priority: 'medium',
         createdAt: new Date().toISOString()
@@ -111,7 +111,7 @@ function App() {
           
       <div className="app-header" >
         <h1 className="app-title">Dragon Todo</h1>
-        <p className="app-subtitle">Drag, drop, and conquer your tasks</p>
+        <p className="app-subtitle">pls drag this in any section to add task</p>
       </div>
 
       <DragDropContext onDragEnd={handleDragEnd}>
