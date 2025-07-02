@@ -29,6 +29,11 @@ function App() {
   const [targetColumn, setTargetColumn] = useState('')
 
   const handleDragEnd = (result) => {
+    // This is destructuring the result object from react-beautiful-dnd's onDragEnd event
+    // destination: where the dragged item was dropped (contains droppableId and index)
+    // source: where the drag started from (contains droppableId and index)
+    // draggableId: the ID of the item being dragged
+    // This is used to handle drag and drop functionality for tasks between columns
     const { destination, source, draggableId } = result
 
     if (!destination) return
@@ -110,7 +115,7 @@ function App() {
 
           
       <div className="app-header" >
-        <h1 className="app-title">Dragon Todo</h1>
+        <h1 className="app-title">Todo</h1>
         <p className="app-subtitle">pls drag this in any section to add task</p>
       </div>
 
